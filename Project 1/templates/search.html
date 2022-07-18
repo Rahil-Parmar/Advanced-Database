@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <title>Task 1</title>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <style>@import "compass/css3";
+        html, body {
+            display: flex;
+            justify-content: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 15px;
+            }
+            
+            input[type=text], input[type=password] {
+            width: 100%;
+            padding: 16px 8px;
+            margin: 8px 0;
+            display: inline-block;
+            /* border: 1px solid #ccc; */
+            box-sizing: border-box;
+            }
+            .icon {
+            font-size: 110px;
+            display: flex;
+            justify-content: center;
+            color: #4286f4;
+            }
+            button {
+            background-color: #4286f4;
+            color: white;
+            padding: 14px 0;
+            margin: 10px 0;
+            border: none;
+            cursor: grab;
+            width: 48%;
+            }
+            h1 {
+            text-align:center;
+            fone-size:18;
+            margin-top: 50px;
+            }
+            button:hover {
+            opacity: 0.8;
+            }
+            .formcontainer {
+            text-align: center;
+            margin: 24px 50px 12px;
+            }
+            .container {
+            padding: 16px 0;
+            text-align:left;
+            }
+            .result{
+              align-items: center;
+              margin-top: 20px;
+             }
+            span.psw {
+            float: right;
+            padding-top: 0;
+            padding-right: 15px;
+            }
+              header {  
+              background-color: #4286f4;  
+              position: fixed;  
+              left: 0;  
+              right: 0;  
+              top: 5px;  
+              height: 30px;  
+              display: flex;  
+              align-items: center;  
+              box-shadow: 0 0 25px 0 black;  
+              }  
+              header * {  
+              display: inline;  
+              }  
+              header li {  
+              margin: 20px;  
+              }  
+              header li a {  
+              color: white;  
+              text-decoration: none;  
+              }  
+              h2{
+                  text-align:center;
+                  fone-size:18;
+              }
+              .result{
+                  margin-top: 40px;
+              }
+            /* Change styles for span on extra small screens */
+            @media screen and (max-width: 300px) {
+            span.psw {
+            display: block;
+            float: none;
+            }}</style>
+  </head>
+  <body>
+    <header>  
+        <nav>  
+            <ul>  
+                <li> <a href="/index"> Home </a> </li>  
+                <li> <a href="/search"> Task 1  </a> </li>  
+                <li> <a href="/SearchDate"> Task 2 </a> </li>  
+                <li> <a href="/eqInRange"> Task 3 </a> </li>  
+                <li> <a href="/cluster"> Task 4 </a> </li>  
+            </ul>  
+        </nav>  
+    </header>  
+
+    <form action="/search" method="post">
+      <h1>Rahil Pradipkumar, Parmar</h1>
+      <h2>8792</h2>
+      <div class="icon">
+  
+      </div>
+      <div class="formcontainer">
+      <div class="container">
+        <label for="f1"><strong>Field</strong></label>
+        <input type="text" placeholder="Enter the magnitude size" name="mag" required>
+      </div>
+      <button type="submit"><strong>Submit</strong></button>
+      <div class="container" style="background-color: #eee">
+        <label style="padding-left: 15px">
+        </label>
+      </div>
+    </form>
+
+    {% for table in tables %}
+    {%for ind in titles%}
+            {{ind}}
+    {%endfor%}
+            {{ table|safe }}
+    {% endfor %}
+
+    <div clas = "result">
+        </div>
+  </body>
+</html>

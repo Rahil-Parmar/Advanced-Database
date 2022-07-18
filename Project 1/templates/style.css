@@ -1,0 +1,220 @@
+
+@import "compass/css3";
+$breakpoint-alpha: 480px;
+html, body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+    }
+    
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    box-sizing: border-box;
+    }
+    .icon {
+    font-size: 110px;
+    display: flex;
+    justify-content: center;
+    color: #4286f4;
+    }
+    button {
+    background-color: #4286f4;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grab;
+    width: 48%;
+    }
+    h1 {
+    text-align:center;
+    fone-size:18;
+    margin-top: 50px;
+    }
+    button:hover {
+    opacity: 0.8;
+    }
+    .formcontainer {
+    text-align: center;
+    margin: 24px 50px 12px;
+    }
+    .container {
+    padding: 16px 0;
+    text-align:left;
+    }
+    .result{
+      align-items: center;
+      margin-top: 20px;
+     }
+    span.psw {
+    float: right;
+    padding-top: 0;
+    padding-right: 15px;
+    }
+      header {  
+      background-color: #4286f4;  
+      position: fixed;  
+      left: 0;  
+      right: 0;  
+      top: 5px;  
+      height: 30px;  
+      display: flex;  
+      align-items: center;  
+      box-shadow: 0 0 25px 0 black;  
+      }  
+      header * {  
+      display: inline;  
+      }  
+      header li {  
+      margin: 20px;  
+      }  
+      header li a {  
+      color: white;  
+      text-decoration: none;  
+      }  
+      h2{
+          text-align:center;
+          fone-size:18;
+      }
+      .result{
+          margin-top: 40px;
+      }
+    /* Change styles for span on extra small screens */
+    @media screen and (max-width: 300px) {
+    span.psw {
+    display: block;
+    float: none;
+    }
+
+/* 
+    .rwd-table {
+        margin: 1em 0;
+        min-width: 300px; 
+        
+        tr {
+          border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+          display: none; 
+        }
+        
+        td {
+          display: block; 
+          
+          &:first-child {
+            padding-top: .5em;
+          }
+          &:last-child {
+            padding-bottom: .5em;
+          }
+      
+          &:before {
+            content: attr(data-th)": "; 
+            font-weight: bold;
+      
+            // optional stuff to make it look nicer
+            width: 6.5em; 
+            display: inline-block;
+            // end options
+            
+            @media (min-width: $breakpoint-alpha) {
+              display: none;
+            }
+          }
+        }
+        
+        th, td {
+          text-align: left;
+          
+          @media (min-width: $breakpoint-alpha) {
+            display: table-cell;
+            padding: .25em .5em;
+            
+            &:first-child {
+              padding-left: 0;
+            }
+            
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      } */
+/*       
+         
+        .rwd-table {
+            background: #4286f4;
+            color: #fff;
+            border-radius: .4em;
+            overflow: hidden;
+            tr {
+              border-color: lighten(#34495E, 10%);
+            }
+            th, td {
+              margin: .5em 1em;
+              @media (min-width: $breakpoint-alpha) { 
+                padding: 1em !important; 
+              }
+            }
+            th, td:before {
+              color: #dd5;
+            }}
+            ul.gradient-list {
+              counter-reset: gradient-counter;
+              list-style: none;
+              margin: 1.75rem 0;
+              padding-left: 1rem;
+              > li {
+                background: white;
+                border-radius: 0 0.5rem 0.5rem 0.5rem;
+                @extend %boxshadow;
+                counter-increment: gradient-counter;
+                margin-top: 1rem;
+                min-height: 3rem;
+                padding: 1rem 1rem 1rem 3rem;
+                position: relative;
+                &::before,
+                &::after {
+                  background: linear-gradient(135deg, $blue 0%,$green 100%);
+                  border-radius: 1rem 1rem 0 1rem;
+                  content: '';
+                  height: 3rem;
+                  left: -1rem;
+                  overflow: hidden;
+                  position: absolute;
+                  top: -1rem;
+                  width: 3rem;
+                }
+                &::before {
+                  align-items: flex-end;
+                  @extend %boxshadow;
+                  content: counter(gradient-counter);
+                  color: $black;
+                  display: flex;
+                  font: 900 1.5em/1 'Montserrat';
+                  justify-content: flex-end;
+                  padding: 0.125em 0.25em;
+                  z-index: 1;
+                }
+                @for $i from 1 through 5 {
+                  &:nth-child(10n+#{$i}):before {
+                    background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
+                  }
+                }
+                @for $i from 6 through 10 {
+                  &:nth-child(10n+#{$i}):before {
+                    background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+                  }
+                }
+                + li {
+                  margin-top: 2rem;
+                }
+              }
+            } */
